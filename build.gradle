@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.2'
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    testCompile 'com.github.tomakehurst:wiremock:1.46'
+}
