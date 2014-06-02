@@ -1,12 +1,10 @@
 package com.geowarin.places
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
-import groovyx.net.http.RESTClient
 import org.junit.Rule
 import spock.lang.Specification
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*
-
 
 /**
  *
@@ -18,6 +16,7 @@ class PlacesSpec extends Specification {
     @Rule
     public WireMockRule wireMockRule = new WireMockRule(8090)
     static final double[] AV_GDE_ARMEE_PARIS = [48.8754201, 2.2888042]
+    static final double[] LEON_DESOYER = [48.8996254, 2.2888042]
 
     def "should_return_stubbed"() {
         given:

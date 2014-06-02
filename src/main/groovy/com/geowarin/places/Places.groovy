@@ -12,13 +12,11 @@ import groovyx.net.http.RESTClient
 @CompileStatic
 class Places {
     public static final RADIUS_IN_METERS = 500
-    private String baseUrl
     private RESTClient client
     private String apiKey
 
     Places(baseUrl = 'https://maps.googleapis.com/') {
-        this.baseUrl = baseUrl
-        this.client = new RESTClient(this.baseUrl)
+        this.client = new RESTClient(baseUrl)
         this.apiKey = getClass().getResourceAsStream('/google_api_key.txt').text
     }
 
